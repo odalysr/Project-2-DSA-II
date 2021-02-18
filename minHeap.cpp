@@ -1,9 +1,10 @@
 #include"minHeap.hpp"
 
 
-//create an array dynamically with 
-MinHeap::MinHeap(){
-	this->c = new Customer[];
+ 
+MinHeap::MinHeap(int capacity){//capacity is 2M+1
+	this->capacity = (capacity*2)+1;
+	
 }
 
 /*
