@@ -1,14 +1,15 @@
-#include"PQ.hpp"
+#include"minHeap.hpp"
 
-PQ::PQ(){
-//is heap created?
+
+//create an array dynamically with 
+MinHeap::MinHeap(){
+	this->c = new Customer[];
 }
-void PQ::serviceAvailablitiy(){ //check for service availability
-//??
-}
+
+/*
 void PQ::push(Customer customer){//next customer in line
 	pq.push(customer);	
 }
 void PQ::pop(Customer customer){
 	pq.pop(customer);
-}
+}*/

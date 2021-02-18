@@ -9,7 +9,7 @@ Customer::Customer(){
 }
 Customer::Customer(float arrivalTime, float startOfServiceTime, float departureTime){
     this->arrivalTime = arrivalTime;
-    this->startOfServiceTime = startOfSeriveTime;
+    this->startOfServiceTime = startOfServiceTime;
     this->departureTime = departureTime;
 }
 Customer::~Customer(){
@@ -33,7 +33,6 @@ float Customer::getStartOfServiceTime(){
 float Customer::getDepartureTime(){
     return this->departureTime;
 }
-//what do I do with pointer
-/*Customer Customer::getNextCustomer(){
+Customer* Customer::getNextCustomer(){//FIFO
     return this->nextCustomer;
-}*/
+}

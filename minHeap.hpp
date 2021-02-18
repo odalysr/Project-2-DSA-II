@@ -1,18 +1,19 @@
-#ifndef PQ_HPP
-#define PQ_HPP
-#include<queue>//std:: make_ heap, push_heap, pop_heap functions
+#ifndef MINHEAP_HPP
+#define MINHEAP_HPP
 #include<iostream>
-#include<customer>
-class PQ{
+#include"customer.hpp"
+
+class MinHeap{
 	private:
-		std::priority_queue< Customer, vector<Customer>, //?? > pq;//200, by default is a vector
+		Customer *c;
 
 
 	public:
-		PQ();
-		void service; //check for service availability
+		MinHeap(); //default constructor;
+		void percolateData(Customer customer);
 		void push(Customer customer);
 		void pop(Customer customer);
+		
 		/*friend ofstream& operator <<(std::ofstream &out, const PQ &pq){
 			while(!pq.empty()){
 				out << pq.top() << std::endl;

@@ -20,12 +20,13 @@ class Customer{
         float getArrivalTime();
         float getStartOfServiceTime();
         float getDepartureTime();
-        Customer getNextCustomer();
+        Customer* getNextCustomer();
         friend std::ostream &operator <<(std::ostream &out, const Customer &customer){
             //error? object customer??
-            out << "Arrival Time " << customer.getArrivalTime() << std::endl;
-            out << "Start of Service Time " << customer.getStartOfServiceTime() << std::endl;
-            out << "Departure Time " << customer.getDepartureTime() << std::endl;
+
+            out << "Arrival Time " << customer.arrivalTime << std::endl;
+            out << "Start of Service Time " << customer.startOfServiceTime << std::endl;
+            out << "Departure Time " << customer.departureTime << std::endl;
            
             return out;
         };            
