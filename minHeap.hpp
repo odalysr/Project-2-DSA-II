@@ -10,9 +10,14 @@ class MinHeap{
 		Customer *customerArray;//ptr to array of Customer elemnts in Heap
 	public:
 		MinHeap(int capacity); //default constructor;
-
+		int parent(int i);//parent of node at index i
+		int leftChild(int i);//left child of node at index i
+		int rightChild(int i);//right child of node at index i
+		void swap(Customer *x, Customer *y); //swap function for customerArray
+		void push(Customer c);//inserts customer at end of array and fixes min heap violations
 
 		/*
+		void heapify();
 		void percolateData(Customer customer);
 		void push(Customer customer);
 		void pop(Customer customer);
