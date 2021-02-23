@@ -9,6 +9,7 @@ class Customer{
         float arrivalTime;
         float startOfServiceTime;
         float departureTime;
+        float pqTime;// special var to prioritize
         Customer* nextCustomer;// FIFO queue
     public:        //setters and getters and initializer for friend to output customer
         Customer();

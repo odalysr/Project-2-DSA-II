@@ -5,12 +5,15 @@ Customer::Customer(){
     this->startOfServiceTime = 0;
     this->departureTime = 0;
 
+    this->pqTime = 0;//set pq to arrival when you get a depart, set pq to departure time
+
     this->nextCustomer = nullptr; //PTR TO NULL??
 }
 Customer::Customer(float arrivalTime, float startOfServiceTime, float departureTime){
     this->arrivalTime = arrivalTime;
     this->startOfServiceTime = startOfServiceTime;
     this->departureTime = departureTime;
+    this->pqTime = arrivalTime;
 }
 Customer::~Customer(){
     delete this->nextCustomer; //delete ptr?
