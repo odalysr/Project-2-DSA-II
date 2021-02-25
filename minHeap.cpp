@@ -1,9 +1,10 @@
 #include"minHeap.hpp"
+#include "customer.hpp"
 #include<iostream>
 #include<vector>
 
 using namespace std;
-
+/*
 int MinHeap::leftChildIndex(int parent){
 	int leftChild;
 	leftChild = 2 * parent + 1;
@@ -30,22 +31,22 @@ int MinHeap::parentIndex(int child){
         return -1;
     else
         return parent;
-}
+}*/
+
 void MinHeap::percolateUp(int index){
-	if (index >= 0 && parentIndex(index) >= 0 && minHeap.at(parentIndex(index)) > minHeap.at(index))
-    {
-        swap(minHeap.at(index),minHeap.at(parentIndex(index)));
-
-		/*
-		int temp = minHeap[index];
-        minHeap[index] = minHeap[parentIndex(index)];
-        minHeap[parentIndex(index)] = temp;
-		*/
-
-        percolateUp(parentIndex(index));
-    }
+	cout << index << "\t";
+	while(index/2 > 0){
+		if (minHeap.at(index) < minHeap.at(index/2))//(index/2 >= 0) && (minHeap.at((index)) > minHeap.at(index)))
+		{
+			cout << index << "\t";
+			swap(minHeap.at(index), minHeap.at(index/2));
+		}
+		index = (index/2);
+	}
+	print();
+	return;
 }
-void MinHeap::percolateDown(int index){
+/*void MinHeap::percolateDown(int index){
 	int leftChild = leftChildIndex(index);
     int rightChild = rightChildIndex(index);
 
@@ -56,28 +57,28 @@ void MinHeap::percolateDown(int index){
     if (leftChild > 0)
     {
        swap(minHeap[index],minHeap[leftChild]);
-	   /* int temp = heap[in];
+	    int temp = heap[in];
         heap[in] = heap[child];
         heap[child] = temp;
-		*/
+		
         percolateDown(leftChild);
     }
-}
+}*/
 MinHeap::MinHeap(){
-	//
+	this->minHeap.push_back(Customer());
 }
 int MinHeap::size(){
-	return minHeap.size();
+	return minHeap.size()-1;
 }
-void MinHeap::swap(Customer x, Customer y){
+/*void MinHeap::swap(Customer x, Customer y){
 	Customer temp = x;
 	x = y;
 	y = temp;	
-}
+}*/
 void MinHeap::insert(Customer customer){
 	//check to see if capacity has reached
 	minHeap.push_back(customer);
-    percolateUp(minHeap.size() - 1);
+    percolateUp(size());
 }
 void MinHeap::deleteMin(){
 	if (minHeap.size() == 0)//check for empty heap
@@ -85,15 +86,21 @@ void MinHeap::deleteMin(){
         cout<<"minHeap is empty"<<endl;
         return;
     }
-    minHeap.at(0) = minHeap.at(minHeap.size() - 1);//set min elemnt to last elemnt
-    minHeap.pop_back();//delete last elemnt of vector
-    percolateDown(0);//fixes any heap violations
+    //minHeap.at(0) = minHeap.at(minHeap.size() - 1);//set min elemnt to last elemnt
+    minHeap.erase(minHeap.begin());//delete last elemnt of vector
+    percolateUp(size());//fixes any heap violations
 
     cout<<"Min element removed successfully"<<endl;
 }
 Customer MinHeap::getMin(){
-	if(minHeap.size() != 0)
-		return minHeap.front();
+	Customer C;
+	if(minHeap.size() != 0){
+		C = minHeap.at(0);
+		minHeap.erase(minHeap.begin());
+		percolateUp(this->minHeap.size()-1);
+		return C;
+	}
+	return C;
 	// else return what?
 }
 
@@ -178,3 +185,9 @@ void MinHeap::deleteMin(){
 
 
 */
+
+void MinHeap::print(){
+	for(int i = 0; i < (int)minHeap.size(); i++){
+		cout << minHeap.at(i) << endl;
+	}
+}

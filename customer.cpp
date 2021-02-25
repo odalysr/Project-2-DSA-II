@@ -16,7 +16,7 @@ Customer::Customer(float arrivalTime, float startOfServiceTime, float departureT
     this->pqTime = arrivalTime;
 }
 Customer::~Customer(){
-    delete this->nextCustomer; //delete ptr?
+    this->nextCustomer = NULL; //delete ptr?
 }
 void Customer::setArrivalTime(float arrivalTime){
     this->arrivalTime = arrivalTime;

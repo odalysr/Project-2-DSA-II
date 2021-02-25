@@ -28,8 +28,11 @@ class Customer{
             out << "Arrival Time " << customer.arrivalTime << std::endl;
             out << "Start of Service Time " << customer.startOfServiceTime << std::endl;
             out << "Departure Time " << customer.departureTime << std::endl;
-           
             return out;
-        };            
+        }           
+        bool operator<(const Customer &C){
+            return this->arrivalTime < C.arrivalTime;
+
+        }
 };
 #endif

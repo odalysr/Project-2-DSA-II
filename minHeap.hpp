@@ -6,27 +6,31 @@
 
 class MinHeap{
 	private:
-		vector <Customer> minHeap;//includes size function
-		int leftChildIndex(int parent);
+		std::vector <Customer> minHeap;//includes size function
+		/*int leftChildIndex(int parent);
 		int rightChildIndex(int parent);
-		int parentIndex(int child);
+		int parentIndex(int child);*/
 		void percolateUp(int index);
-		void percolateDown(int index);
+		//void percolateDown(int index);
 		int capacity;//capacity of heap
 
-		/*
-		int capacity;//capacity of minHeap 
-		int heapSize;//curr num of elemnt in heap
-		Customer *customerArray;//ptr to array of Customer elemnts in Heap
-		*/
 	public:
 		MinHeap();
 		int size();//returns size of heap
-		void swap(Customer x, Customer y);
+		//void swap(Customer x, Customer y);
 		void insert(Customer customer);
 		void deleteMin();
 		Customer getMin();
+		void print();
 		
+};
+#endif
+
+
+
+
+
+
 
 	/*
 		MinHeap(int capacity); //default constructor;
@@ -55,5 +59,4 @@ class MinHeap{
 			}
 		}*/
 	   	       	   
-};
-#endif
+
