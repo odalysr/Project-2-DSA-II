@@ -46,24 +46,7 @@ void MinHeap::percolateUp(int index){
 	print();
 	return;
 }
-/*void MinHeap::percolateDown(int index){
-	int leftChild = leftChildIndex(index);
-    int rightChild = rightChildIndex(index);
 
-    if (leftChild >= 0 && rightChild >= 0 && (minHeap.at(leftChild) > minHeap.at(rightChild)))
-    {
-       leftChild = rightChild;
-    }
-    if (leftChild > 0)
-    {
-       swap(minHeap[index],minHeap[leftChild]);
-	    int temp = heap[in];
-        heap[in] = heap[child];
-        heap[child] = temp;
-		
-        percolateDown(leftChild);
-    }
-}*/
 MinHeap::MinHeap(){
 	this->minHeap.push_back(Customer());
 }
