@@ -1,28 +1,28 @@
 #include"stats.hpp"
 #include <cmath>
 
-Stats::Stats(int l, int M, int m, int n){
+Stats::Stats(float l, float M, float m, float n){
     this->l=l;//lambda
     this->M=M;//num of service channels
     this->m=m; //µ
     this->n=n;//num of arrivals to simulate
 }
-int Stats::factorial(int n){
+float Stats::factorial(float n){
     return (n==1 || n==0) ? 1: n * factorial(n - 1);
 }
 float Stats::Po(){ 
     float summa;
 
-    for(int i =0; i < this->M; i++){
-        float a = 1/((float)factorial(i));
-        float b = this->l/m;
+    for(float i =0; i < this->M; i++){
+        float a = 1/(factorial(i));
+        float b = l/m;
         float c = pow(b,i); //pow(base, exponent)
         float z = a*c;
         summa += z;
     }
 
 
-    float d = 1/((float)factorial(M));
+    float d = 1/(factorial(M));
     float e = l/m;
     float f = pow(e,M);
     float g = (M*m)/(M*(m-l));

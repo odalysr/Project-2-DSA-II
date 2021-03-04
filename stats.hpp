@@ -3,18 +3,17 @@
 
 class Stats{
     private:
-        int n;//number of arrivals to simulate
+        float n;//number of arrivals to simulate
 
-        int l; //lambda 
-        int M;//number of service channels
+        float l; //lambda 
+        float M;//number of service channels
         float m;//Avg number served in a time period (mu) µ
     public:
-        Stats(int l, int M, int m, int n);//default constructor
-        int factorial(int n);
+        Stats(float l, float M, float m, float n);//default constructor
+        float factorial(float n);
         float Po();
         float L();
         float W();
-        float Lq();
         float Lq();
         float Wq();
         float rho();
