@@ -1,5 +1,9 @@
 #include"fifo.hpp"
+#include<vector>
+#include<iostream>
+#include"customer.hpp"
 
+using namespace std;
 int main(){
     Customer a, b, c;
     Fifo f;
@@ -8,15 +12,10 @@ int main(){
     f.add(b);
     f.add(c);
 
-    for(int i=0; i < f.size(); i++){
-        std::cout<< f.at(i) << std::endl;
-    }
+    f.print();
 
-    f.remove(a);
+    std::cout<< "removed elemnt" << std::endl;
+    f.remove();
 
-    for(int i=0; i < f.size(); i++){
-        std::cout<< f.at(i) << std::endl;
-    }
-
-    
+    f.print();
 }

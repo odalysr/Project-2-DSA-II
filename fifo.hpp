@@ -5,10 +5,10 @@
 
 class Fifo{
     private:
-        std::Vector<Customer> fifo;
+        std::vector<Customer> fifo;
     public:
-        Fifo();
         void remove();//remove front
-        void add();//add to back
+        void add(Customer C);//add to back
+        void print();
 };
 #endif
