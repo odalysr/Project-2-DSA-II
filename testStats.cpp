@@ -1,3 +1,9 @@
+/***************************************************************
+  Student Name: Odalys Rodriguez
+  File Name: testStats.cpp
+  Project 2
+  test Stats Class
+***************************************************************/  
 #include"stats.hpp"
 #include<iostream>
 

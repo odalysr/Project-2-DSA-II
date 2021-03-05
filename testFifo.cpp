@@ -1,3 +1,9 @@
+/***************************************************************
+  Student Name: Odalys Rodriguez
+  File Name: testFifo.cpp
+  Project 2
+  test Fifo Class
+***************************************************************/  
 #include"fifo.hpp"
 #include<vector>
 #include<iostream>

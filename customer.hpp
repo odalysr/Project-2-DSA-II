@@ -1,4 +1,10 @@
 
+/***************************************************************
+  Student Name: Odalys Rodriguez
+  File Name: Customer.hpp
+  Project 2
+  Customer Class
+***************************************************************/  
 #ifndef CUSTOMER_HPP
 #define CUSTOMER_HPP
 #include<iostream>

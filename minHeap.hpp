@@ -1,3 +1,9 @@
+/***************************************************************
+  Student Name: Odalys Rodriguez
+  File Name: minHeap.hpp
+  Project 2
+  minHeap Class
+***************************************************************/  
 #ifndef MINHEAP_HPP
 #define MINHEAP_HPP
 #include<iostream>

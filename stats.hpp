@@ -1,3 +1,9 @@
+/***************************************************************
+  Student Name: Odalys Rodriguez
+  File Name: stats.hpp
+  Project 2
+  Stats Class
+***************************************************************/  
 #ifndef STATS_HPP
 #define STATS_HPP
 

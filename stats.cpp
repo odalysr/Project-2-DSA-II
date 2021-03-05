@@ -1,3 +1,9 @@
+/***************************************************************
+  Student Name: Odalys Rodriguez
+  File Name: stats.cpp
+  Project 2
+  Stats Class
+***************************************************************/  
 #include"stats.hpp"
 #include <cmath>
 

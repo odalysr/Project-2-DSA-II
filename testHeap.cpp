@@ -1,3 +1,9 @@
+/***************************************************************
+  Student Name: Odalys Rodriguez
+  File Name: testHeap.cpp
+  Project 2
+  test heap Class
+***************************************************************/  
 #include <iostream>
 #include "customer.hpp"
 #include "minHeap.hpp"

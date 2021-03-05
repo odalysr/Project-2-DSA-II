@@ -1,3 +1,9 @@
+/***************************************************************
+  Student Name: Odalys Rodriguez
+  File Name: Customer.cpp
+  Project 2
+  Customer Class
+***************************************************************/  
 #include"customer.hpp"
 
 Customer::Customer(){

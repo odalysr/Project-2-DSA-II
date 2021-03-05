@@ -1,3 +1,9 @@
+/***************************************************************
+  Student Name: Odalys Rodriguez
+  File Name: fifo.hpp
+  Project 2
+  Fifo Class
+***************************************************************/  
 #ifndef FIFO_HPP
 #define FIFO_HPP
 #include<vector>
