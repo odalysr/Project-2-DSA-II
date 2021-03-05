@@ -1,8 +1,8 @@
 # Project-2-DSA-II
-#Program Description:
+# Program Description:
 The program simulates real-time event-driven programming. The program simulates customers utilizing up to 10 services. Once the services are full, the program places those customers in a FIFO queue. While the event-driven simulation occurs, the program will compute the analytical model. 
 
-#Setup and Compilation:
+# Setup and Compilation:
 1. Download and unzip the submission from eLearning on a Linux box in the multi-platform lab.
 
 2. The submission includes:
@@ -28,7 +28,7 @@ MakeFile
 The program creates the executable main To run the program make sure to use the command 
 ./main
 
-#Running the program:
+# Running the program:
 User input: 
 lambda (l) = 2
 mu (m) = 3
